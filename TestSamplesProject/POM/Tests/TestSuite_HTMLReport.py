@@ -3,6 +3,8 @@ import HtmlTestRunner
 import os
 import TestSamplesProject.POM.Tests.CarInsuranceTest
 import TestSamplesProject.POM.Tests.HomepageTest
+import TestSamplesProject.POM.Tests.HomeInsurance
+
 
 # get the directory path to output report file
 dir = os.getcwd()
@@ -10,10 +12,11 @@ dir = os.getcwd()
 # get all tests from Homepage and HomeInsurance class
 HomepageTest = unittest.TestLoader().loadTestsFromTestCase(TestSamplesProject.POM.Tests.HomepageTest.HomepageTestCase)
 CarInsuranceTest = unittest.TestLoader().loadTestsFromTestCase(TestSamplesProject.POM.Tests.CarInsuranceTest.CarInsuranceTestCase)
+HomeInsuranceTest = unittest.TestLoader().loadTestsFromTestCase(TestSamplesProject.POM.Tests.HomeInsurance.HomeInsuranceTestCase)
 
 
 # create a test suite combining Homepage and HomeInsurance
-test_suite = unittest.TestSuite([HomepageTest, CarInsuranceTest])
+test_suite = unittest.TestSuite([HomepageTest, CarInsuranceTest, HomeInsuranceTest])
 
 # open the report file
 outfile = open(dir + "\SeleniumPythonTestSummary.html", "w")
