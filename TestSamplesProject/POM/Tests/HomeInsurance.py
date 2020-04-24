@@ -6,7 +6,8 @@ from time import sleep
 class HomeInsuranceTestCase(unittest.TestCase):
     #open browser to TheZebra.com
     def setUp(self):
-        self.browser = webdriver.Chrome('/Users/jawaid/PycharmProjects/TheZebraSelenium/drivers/chromedriver')
+        # be sure to update the chromedriver location when executing the tests
+        self.browser = webdriver.Chrome('/Users/jawaid/PycharmProjects/TheZebraAssignmentPOM/drivers/chromedriver')
         self.browser.implicitly_wait(5)
         self.browser.maximize_window()
         self.browser.get('http://www.TheZebra.com')
