@@ -7,6 +7,7 @@ class ci_startPage():
         #list of elements to move to locators
         self.radbtn_YesInsured = '//label[@data-cy="currently_insuredstart-Yes-Radiobutton"]'
         self.radbtn_livingsituationOptions = '//label[starts-with(@data-cy, "residence_ownershipstart-")]'
+        self.radbtn_userintent = '//label[starts-with(@data-cy, "user_intentstart-")]'
         self.btn_saveAndCont = '//button[@id="startSaveBtn"]'
 
     #selects yes for being currently insured

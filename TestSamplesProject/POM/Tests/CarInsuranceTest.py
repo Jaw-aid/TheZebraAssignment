@@ -42,6 +42,9 @@ class CarInsuranceTestCase(unittest.TestCase):
         #select random living situation
         ci_startpage.select_RANDOMRadioBtn(ci_startpage.radbtn_livingsituationOptions)
         sleep(2)
+        #select intent
+        ci_startpage.select_RANDOMRadioBtn(ci_startpage.radbtn_userintent)
+        sleep(2)
         #click save and cont
         ci_startpage.click_SaveCont()
         sleep(5)

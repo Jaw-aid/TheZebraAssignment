@@ -43,14 +43,14 @@ class HomepageTestCase(unittest.TestCase):
 
     #check to see if How it works section is present
     def test_06_FeaturesContainerPresent(self):
-        HowItWorks = self.browser.find_element_by_xpath('//div[@class="homepage-features-container"]')
+        HowItWorks = self.browser.find_element_by_xpath('//div[@class="how-zebra-works-container"]')
         self.browser.execute_script("arguments[0].scrollIntoView();", HowItWorks)
         self.assertTrue(HowItWorks.is_displayed())
         sleep(2)
 
     #check to see if "How does The Zebra work?" is present
     def test_07_FeaturesContainer_Headline(self):
-        HowItWorks_Text = self.browser.find_element_by_xpath('//h2[@class="features-headline display-5"]').text
+        HowItWorks_Text = self.browser.find_element_by_xpath('//h2[@class="how-zebra-works-headline display-5"]').text
         assert HowItWorks_Text == 'How does\nThe Zebra work?'
 
     #check to see if Our Privacy Pledge section is present
